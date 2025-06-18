@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout Using CSS Flexbox</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Student Marks Report</h1>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#marks">Marks</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <!-- Sidebar (Form Section) -->
+    <section class="sidebar">
+      <h2>Enter Marks:</h2>
+      <form>
+        Name: <input type="text"><br><br>
+        Roll Number: <input type="number"><br><br>
+        Math: <input type="number"><br><br>
+        Science: <input type="number"><br><br>
+        Literature: <input type="number"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+    <section class="main-content-section">
+      <h2>Marks Table:</h2>
+      <table border="1">
+        <tr>
+          <th>Name</th>
+          <th>Roll Number</th>
+          <th>Math</th>
+          <th>Science</th>
+          <th>Literature</th>
+        </tr>
+        <tr>
+          <td>Ved</td>
+          <td>66</td>
+          <td>98</td>
+          <td>90</td>
+          <td>89</td>
+        </tr>
+      </table>
+
+      <h2>How Marks Are Evaluated (Video)</h2>
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/OktkHaGXquc?si=TWqXsPejm97rPk6I" title="Marking Scheme" frameborder="0"></iframe>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <p>© 2025 WebTeam Pvt. Ltd. | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
