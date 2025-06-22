@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 1 - DOM Selection</title>
+</head>
+<body>
+  <h1 id="main-heading">Hello World</h1>
+  <p class="main-paragraph">This is a paragraph.</p>
+  <button id="changeTextBtn">Click Me</button>
+
+  <script>
+    const heading = document.getElementById("main-heading");
+    const paragraph = document.querySelector(".main-paragraph");
+    const button = document.getElementById("changeTextBtn");
+
+    button.addEventListener("click", () => {
+      heading.textContent = "Heading Changed!";
+      paragraph.textContent = "Paragraph has been updated!";
+    });
+  </script>
+</body>
+</html>
