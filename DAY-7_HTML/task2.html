@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2 - Input & Output</title>
+</head>
+<body>
+  <h2>Enter Your Name</h2>
+  <input type="text" id="nameInput" placeholder="Your name">
+  <button id="submitBtn">Submit</button>
+  <p id="welcomeMessage"></p>
+
+  <script>
+    const nameInput = document.getElementById("nameInput");
+    const submitBtn = document.getElementById("submitBtn");
+    const message = document.getElementById("welcomeMessage");
+
+    submitBtn.addEventListener("click", () => {
+      const name = nameInput.value.trim();
+      if (name) {
+        message.textContent = `Welcome, ${name}!`;
+      } else {
+        message.textContent = "Please enter your name!";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 4 - To-Do List</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    ul {
+      padding-left: 0;
+    }
+    li {
+      list-style: none;
+      margin: 8px 0;
+    }
+    .deleteBtn {
+      margin-left: 10px;
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTaskBtn">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    const taskInput = document.getElementById("taskInput");
+    const addTaskBtn = document.getElementById("addTaskBtn");
+    const taskList = document.getElementById("taskList");
+
+    addTaskBtn.addEventListener("click", () => {
+      const taskText = taskInput.value.trim();
+      if (taskText) {
+        const li = document.createElement("li");
+        li.textContent = taskText;
+
+        const deleteBtn = document.createElement("span");
+        deleteBtn.textContent = "❌";
+        deleteBtn.classList.add("deleteBtn");
+
+        deleteBtn.addEventListener("click", () => {
+          taskList.removeChild(li);
+        });
+
+        li.appendChild(deleteBtn);
+        taskList.appendChild(li);
+        taskInput.value = "";
+      }
+    });
+  </script>
+</body>
+</html>
